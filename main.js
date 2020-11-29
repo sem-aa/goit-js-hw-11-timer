@@ -34,7 +34,7 @@ class CountdownTimer {
       const currentTime = Date.now();
       this.deltaTime = this.targetDate - currentTime;
       this.getTimeComponents(this.deltaTime);
-    }, 1000);
+    }, 0);
   }
 }
 
