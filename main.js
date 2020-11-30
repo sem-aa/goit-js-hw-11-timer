@@ -30,11 +30,14 @@ class CountdownTimer {
   }
 
   start() {
+    const currentTime = Date.now();
+    this.deltaTime = this.targetDate - currentTime;
+    this.getTimeComponents(this.deltaTime);
     setInterval(() => {
       const currentTime = Date.now();
       this.deltaTime = this.targetDate - currentTime;
       this.getTimeComponents(this.deltaTime);
-    }, 0);
+    }, 1000);
   }
 }
 
